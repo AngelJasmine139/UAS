@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/style.css" rel="stylesheet">
+
+  <!-- normalize css -->
+  <link href="./css/normalize.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <img src="background.png" alt="background">
+
+  <title>Document</title>
+</head>
+<body class="all">
+
+  <header>
+    <nav class="container">
+      <div class="logo">
+       <img src="UENA-Logo.png" alt="UENA-Logo" width="220%" height="200%">
+      </div>
+      <ul class="menu">
+        <li class="home">HOME</li>
+        <li class="about">ABOUT</li>
+        <li class="MENU">MENU</li>
+        <li class="how-to-order">HOW TO ORDER</li>
+      </ul>
+   </nav>
+ </header>
+
+ <main>
+    <section class="tengah">
+      <div class="container">
+        <div class="gambar">
+          <img src="mie.png" alt="mie" width="72%" height="72%">
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <main>
+    <section class="hero">
+      <div class="aboutus">
+
+        <div class="aboutpic1">
+          <img align="left" src="mieee.png" alt="mie-kiri" width="100%" height="100%">
+
+        </div>
+
+        <div class="abouttext">
+          <h1 style="clear: center;">ABOUT</h1>
+
+          <p>
+            UENA provides online food and beverage services. It offers a one-stop solution for daily food through online delivery, serving customers in an affordable and accessible manner. UENA was founded in 2022 and is based in West Jakarta, Indonesia.
+          </p>
+
+  
+        </div>
+
+        <div class="aboutpic2">
+          <img align="right" src="mieee.png" alt="mie-kanan" width="100%" height="100%">
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+    <section class="third-section">
+      <div class="NEW"><h2>NEW IN MENU</h2></div>
+
+
+      <div class="card_carousel">
+        <ul class="card_carousel__list">
+          <li class="card_carousel__item bg-carousel" data-pos="-2" style="background-image: url(/ayam_geprek_matah.png);">1</li>
+          <li class="card_carousel__item bg-carousel" data-pos="-1" style="background-image: url(/soto_lamongan.png);">2</li>
+          <li class="card_carousel__item bg-carousel" data-pos="0" style="background-image: url(/mie_ayam.png);">3</li>
+          <li class="card_carousel__item bg-carousel" data-pos="1" style="background-image: url(/ayam_geprek_korek.png);">4</li>
+          <li class="card_carousel__item bg-carousel" data-pos="2" style="background-image: url(/nasi_goreng.png);">5</li>
+        </ul>
+      </div>
+      <script>
+        const state = {};
+        const carouselList = document.querySelector(".card_carousel__list");
+        const carouselItems = document.querySelectorAll(".card_carousel__item");
+        const elems = Array.from(carouselItems);
+  
+        carouselList.addEventListener("click", function (event) {
+          var newActive = event.target;
+          var isItem = newActive.closest(".card_carousel__item");
+  
+          if (
+            !isItem ||
+            newActive.classList.contains("card_carousel__item_active")
+          ) {
+            return;
+          }
+  
+          update(newActive);
+        });
+  
+        const update = function (newActive){
+          const newActivePos = newActive.dataset.pos;
+  
+          const current = elems.find((elem) => elem.dataset.pos == 0);
+          const prev = elems.find((elem) => elem.dataset.pos == -1);
+          const next = elems.find((elem) => elem.dataset.pos == 1);
+          const first = elems.find((elem) => elem.dataset.pos == -2);
+          const last = elems.find((elem) => elem.dataset.pos == 2);
+  
+          current.classList.remove("_carousel__item_active");
+  
+          [current, prev, next, first, last].forEach((item) => {
+            var itemPos = item.dataset.pos;
+  
+            item.dataset.pos = getPos(itemPos, newActivePos);
+          });
+        };
+  
+        const getPos = function (current, active){
+          const diff = current - active;
+  
+          if (Math.abs(current - active) > 2) {
+            return -current;
+          }
+  
+          return diff;
+        };
+      </script>
+      
+     
+    </section>
+
+    <section class="fourth-section">
+      <div class="how-to-order-"><h2>HOW TO ORDER</h2></div>
+
+      <div class="gambar-kecil">
+        <ul class="logoo">
+            <img class="img_instagram" src="/tes instagram.png" width="7%" height="7%">
+            <img class="img_email" src="/tes gmail.png" width="7%" height="7%">
+            <img class="img_phone" src="/tes phone.png" width="7%" height="7%">
+            <img class="img_uena-app" src="/uenafood_logo.jpg">
+            
+        </ul>
+        <ul class="footer">
+            <li class="instagram">@uenafood</li>
+            <li class="email">uenafood@gmail.com</li>
+            <li class="phone">+62 0000000000</li>
+            <li class="uena-app">UENA App</li>
+        </ul>
+      </div>
+
+      <div class="gambar-akhir">
+        <img src="/mieee.png"  alt="mie-kiri" width="70%" height="70%">
+      </div>
+     </section>
+
+
+    
+   </main>
+
+
+  
+</body>
+</html>

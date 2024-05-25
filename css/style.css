@@ -1,0 +1,477 @@
+@import "animation.css";
+@import "variable.css";
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+ img{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+ }
+ 
+.all{
+  background-color:#ffcc33;
+  background-size: 100% 100%;
+  margin: 0px;
+  padding: 0px;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+
+.background{
+  background-image: url(/background.png);
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position-y: top;
+  opacity: 0.75;
+}
+
+.container{
+  margin: 0;
+}
+
+section{
+ height: 100vh;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  gap:1rem;
+  list-style-type: none;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition untuk menu */
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+  transition: background-color 0.5s, height 0.5s;
+}
+
+nav{
+  font-size: 17px;
+  height: 56px;
+  color: #6b2c8f;
+  font-family: "Montserrat Subrayada-Bold";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  filter: blur(0.5px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.menu{
+  margin-left: 30px;
+  flex-direction: row;
+  justify-content: right;
+  list-style-type: none;
+  display: flex; 
+}
+
+.logo{
+ margin-left: 30px;
+ margin-right: 30px;
+ margin-top: 20px;
+ list-style-type: none;
+ float: left;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 20px;
+}
+
+.home{
+  font-size: 17px;
+  margin-top: 20px;
+  margin-right:30px ;
+  margin-left: 30px;
+  color:#6b2c8f;
+  font-family: "Montserrat Subrayada-Bold";
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.home:hover{
+  color: #200a2d;
+}
+
+.about{
+  font-size: 17px;
+  margin-top: 20px;
+  margin-right:30px ;
+  margin-left: 30px;
+  color:#6b2c8f;
+  font-family: "Montserrat Subrayada-Bold";
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.about:hover{
+  color: #200a2d;
+}
+
+.MENU{
+  font-size: 17px;
+  margin-top: 20px;
+  margin-right:30px ;
+  margin-left: 30px;
+  color:#6b2c8f;
+  font-family: "Montserrat Subrayada-Bold";
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.MENU:hover{
+  color: #200a2d;
+}
+
+.how-to-order{
+  font-size: 17px;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-left: 30px;
+  color:#6b2c8f;
+  font-family: "Montserrat Subrayada-Bold";
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.how-to-order:hover{
+  color: #200a2d;
+}
+
+li{
+  display: list-item;
+  text-align: center;
+  unicode-bidi: isolate;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.menu-list{
+  padding: 4px 8px;
+  font-style: normal;
+  font-weight: 100;
+  border-radius: 8px;
+  list-style-type: none;
+  gap: 2rem;
+  margin: auto 0;
+}
+
+.tengah{
+  max-height: 55vh;
+}
+
+.gambar{
+  object-fit: cover;
+  margin-top: -1950px;
+  image-rendering: pixelated;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero{
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.aboutus{
+  margin-top: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  background-color: #FFE7A2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68vh;
+}
+
+.aboutpic1{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: space-around;
+  justify-items: left;
+  margin-left: -190px;
+  left: 0;
+  object-fit: cover;
+  top: 0;
+  overflow: auto;
+}
+
+.aboutpic2{
+  -webkit-transform: rotate(2270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  display: flex;
+  justify-content: space-around;
+  justify-items: right;
+  float: right;
+  object-fit: cover;
+  margin-right: -190px;
+  top: 0;
+  overflow: auto;
+}
+
+.abouttext {
+  margin-top: 30px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.abouttext>h1{
+  margin-top: 30px;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color:#6b2c8f;
+  font-family: "Montserrat Subrayada-Bold";
+  font-size: 30px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.abouttext>h1:hover{
+  color: #200a2d;
+}
+
+.abouttext>p{
+  text-decoration: none;
+  font-family: "montserrat";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: #6b2c8f;
+  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-section{
+  background-color: #6b2c8f;
+  background-size: cover;
+  background-position: fixed;
+  height: 72vh;
+}
+
+.NEW>h2{
+  margin-top: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right:30px ;
+  margin-left: 30px;
+  color:#ffcc33;
+  font-family: "Montserrat Subrayada-Bold";
+  font-size: 30px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  padding-top: 60px;
+}
+
+.NEW>h2:hover{
+  color: #200a2d;
+}
+
+.card_carousel{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin-top: -55px;
+}
+.card_carousel__list{
+  display: flex;
+  list-style: none;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  justify-content: center;
+  perspective: 300px;
+}
+
+.card_carousel__item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0px;
+  width: 200px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  transition: all 0.3s ease-in;
+  
+  background-size: 155%;
+  background-position: center;
+  max-height: max-content;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+.card_carousel__item[data-pos="0"]{
+  z-index: 5;
+}
+
+.card_carousel__item[data-pos="-1"],
+.card_carousel__item[data-pos="1"]{
+  opacity: 0.7;
+  filter: blur(1px) grayscale(10%);
+}
+
+.card_carousel__item[data-pos="-1"]{
+  transform: translateX(-25vh) scale(0.7);
+  z-index: 4;
+}
+
+.card_carousel__item[data-pos="1"]{
+  transform: translateX(25vh) scale(0.7);
+  z-index: 4;
+}
+
+.card_carousel__item[data-pos="-2"],
+.card_carousel__item[data-pos="2"]{
+  opacity: 0.4;
+  filter: blur(3px) grayscale(20%);
+}
+
+.card_carousel__item[data-pos="-2"]{
+  transform: translateX(-50vh) scale(0.7);
+  z-index: 3;
+}
+
+.card_carousel__item[data-pos="2"]{
+  transform: translateX(50vh) scale(0.7);
+  z-index: 3;
+}
+
+bg-carousel{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+bg-carousel:nth-child(1){
+  background-image: url(/ayam_geprek_matah.png);
+}
+bg-carousel:nth-child(2){
+  background-image: url(/soto_lamongan.png);
+}
+bg-carousel:nth-child(3){
+  background-image: url(/mie_ayam.png);
+}
+bg-carousel:nth-child(4){
+  background-image: url(/ayam_geprek_korek.png);
+}
+bg-carousel:nth-child(5){
+  background-image: url(/nasi_goreng.png);
+}
+
+.how-to-order-{
+  margin-top: 60px;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color:#6b2c8f;
+  font-family: "Montserrat Subrayada-Bold";
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.how-to-order-:hover{
+  color: #200a2d;
+}
+
+.footer{
+  margin-left: 110px;
+  margin-right: 110px;
+  justify-content:space-between ;
+  font-size: 23px;
+  flex-direction: row;
+  list-style-type: none;
+  display: flex;  
+  color: #6b2c8f;
+  font-family: "Montserrat";
+  text-align: center;
+  padding-top: 50px;
+  gap: 20px;
+  height: 35vh;
+}
+
+.logoo{
+  padding-top: 120px;
+  justify-content:center;
+  list-style-type: none;
+  display: flex; 
+  justify-content:space-between ; 
+  margin-left: 130px;
+  margin-right: 130px;
+}
+
+.img_email{
+ margin-left: 70px;
+ margin-right: 100px;
+}
+
+.img_phone{
+  margin-left: -20px;
+  margin-right: -15px;
+}
+
+.img_uena-app{
+ margin-right: -55px;
+ margin-top: -60px;
+}
+
+.gambar-akhir{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -120px;
+}
